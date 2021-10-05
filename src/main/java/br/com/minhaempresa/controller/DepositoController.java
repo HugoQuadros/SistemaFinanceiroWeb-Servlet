@@ -1,9 +1,5 @@
 package br.com.minhaempresa.controller;
 
-import br.com.minhaempresa.domain.Cliente;
-import br.com.minhaempresa.domain.Conta;
-import br.com.minhaempresa.domain.ContaCorrente;
-import service.ConsultarSaldoService;
 import service.DepositarService;
 
 import javax.servlet.ServletException;
@@ -15,11 +11,6 @@ import java.io.IOException;
 
 @WebServlet(urlPatterns = "/depositar")
 public class DepositoController extends HttpServlet {
-
-//    @Override
-//    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        resp.getWriter().println("Funfou");
-//    }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

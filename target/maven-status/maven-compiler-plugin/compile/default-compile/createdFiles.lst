@@ -1,4 +1,6 @@
-br\com\minhaempresa\controller\DepositoController.class
 service\ConsultarSaldoService.class
+br\com\minhaempresa\controller\DepositoController.class
+br\com\minhaempresa\controller\SaqueController.class
 service\DepositarService.class
+service\SacarService.class
 br\com\minhaempresa\controller\ConsultaSaldoController.class
