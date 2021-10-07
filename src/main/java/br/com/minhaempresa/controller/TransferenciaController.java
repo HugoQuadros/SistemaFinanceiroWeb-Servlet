@@ -4,7 +4,7 @@ import br.com.minhaempresa.domain.Cliente;
 import br.com.minhaempresa.domain.Conta;
 import br.com.minhaempresa.domain.ContaCorrente;
 import br.com.minhaempresa.exception.SaldoInsuficienteException;
-import service.TransferirService;
+import br.com.minhaempresa.service.TransferirService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

@@ -1,6 +1,6 @@
 package br.com.minhaempresa.controller;
 
-import service.DepositarService;
+import br.com.minhaempresa.service.DepositarService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,11 +20,10 @@ public class DepositoController extends HttpServlet {
         double valor = Double.valueOf(req.getParameter("valor"));
 
         DepositarService depositarService = new DepositarService();
-        double saldo = depositarService.depositar(nome, sobrenome, valor);
+        depositarService.depositar(nome, sobrenome, valor);
 
         resp.getWriter().println("Depósito na conta do cliente " + nome + " " + sobrenome +
                 " no valor de " + valor + " feita com sucesso");
-        resp.getWriter().println("Seu saldo atualizado é de: " + saldo);
 
     }
 

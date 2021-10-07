@@ -1,9 +1,6 @@
 package br.com.minhaempresa.controller;
 
-import br.com.minhaempresa.domain.Cliente;
-import br.com.minhaempresa.domain.Conta;
-import br.com.minhaempresa.domain.ContaCorrente;
-import service.ConsultarSaldoService;
+import br.com.minhaempresa.service.ConsultarSaldoService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,21 +12,15 @@ import java.io.IOException;
 @WebServlet(urlPatterns = "/consultar-saldo")
 public class ConsultaSaldoController extends HttpServlet {
 
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        String nome = req.getParameter("nome");
-        String sobrenome = req.getParameter("sobrenome");
+        int id = Integer.valueOf(req.getParameter("id"));
 
         ConsultarSaldoService consultarSaldoService = new ConsultarSaldoService();
-        double saldo = consultarSaldoService.consultarSaldo(nome, sobrenome);
+        double saldo = consultarSaldoService.consultarSaldo(id);
 
-        resp.getWriter().println("Funfou!");
-        resp.getWriter().println("O saldo do cliente " + nome + " " +
-                sobrenome +" é de: " + saldo);
+        resp.getWriter().println("O saldo do cliente é de: " + saldo);
     }
-
-
 
 }

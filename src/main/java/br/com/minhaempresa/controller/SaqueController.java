@@ -1,7 +1,7 @@
 package br.com.minhaempresa.controller;
 
 import br.com.minhaempresa.exception.SaldoInsuficienteException;
-import service.SacarService;
+import br.com.minhaempresa.service.SacarService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
